@@ -86,3 +86,7 @@ Route::middleware(['auth'])
     });
 
 Route::get('/produtos/{categoria}', [DashboardController::class, 'buscarProduto']);
+
+Route::get('/dashboard/exportar-pdf', [DashboardController::class, 'pdfHome'])->name('dashboard.exportarPdf');
+
+Route::get('/camiseta/exportar-pdf', [CamisetaController::class, 'pdfHome'])->name('camiseta.exportarPdf');

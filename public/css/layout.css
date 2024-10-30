@@ -250,7 +250,7 @@ main {
 }
 
 .acao:last-child {
-    color: black;
+    color: #000;
     font-size: 20px;
     border: 1px black solid;
 }
@@ -326,6 +326,11 @@ color: #fff;
 [data-bs-theme="dark"] .logout-img,
 [data-bs-theme="dark"] .backup-img  {
     filter: invert(0) !important;
+}
+
+[data-bs-theme="dark"] .acao:last-child{
+    color: #fff;
+    border: 1px #fff solid;
 }
 
 @media screen and (max-width: 1280px) {

@@ -124,7 +124,7 @@ class CamisetaController extends Controller
     {
         $camisetas = Camiseta::all();
 
-        $pdf = PDF::loadView('relatorios.camiseta-geral_pdf', [
+        $pdf = PDF::loadView('relatorio.camiseta', [
             'camisetas' => $camisetas,
         ]);
 
@@ -136,7 +136,7 @@ class CamisetaController extends Controller
         $camiseta = Camiseta::where('codigo', $codigo)->firstOrFail();
 
         $pdf = PDF::loadView(
-            'relatorios.camiseta',
+            'relatorio.camiseta',
             ['camiseta' => $camiseta]
         );
 
